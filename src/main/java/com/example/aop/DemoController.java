@@ -26,9 +26,8 @@ public class DemoController {
 	public DemoVO getResponse(HttpServletRequest request, HttpServletResponse response,
 			@RequestHeader("X-Device-Version") String deviceVersion, @RequestHeader("X-Device-OS") String deviceOS,
 			@RequestBody DemoUserVO user) {
-		DemoVO demoVO = null;
+		DemoVO demoVO = new DemoVO();
 		if (util.validate(request, response, deviceVersion)) {
-			demoVO = new DemoVO();
 			demoVO.setDeviceOS(deviceOS);
 			demoVO.setDeviceVersion(deviceVersion);
 			demoVO.setUserName(user.getUserName());
