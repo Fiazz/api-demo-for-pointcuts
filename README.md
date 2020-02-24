@@ -21,5 +21,5 @@ Logs: Check the last two Lines below
 2020-02-25 03:53:53.207  INFO 228 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
 2020-02-25 03:53:53.405  INFO 228 --- [nio-8080-exec-1] com.example.aop.DemoEO                   : Generated guid : b3b2b6bc-0007-410f-9c40-73b0c89c9dcd for User : kathy64
 2020-02-25 03:53:53.422  INFO 228 --- [nio-8080-exec-1] com.example.aop.DemoLoggingAspect        : Attempted /Portal login with request User Name : com.example.aop.DemoUserVO@6af628ab[userName=kathy64], User Guid : b3b2b6bc-0007-410f-9c40-73b0c89c9dcd , Device Version : 1 , OS : Android, Method : POST and Response is 200.
-2020-02-25 04:01:55.966  INFO 9864 --- [nio-8080-exec-1] com.example.aop.DemoLoggingAspect        : Attempted /Portal login with request User Name : com.example.aop.DemoUserVO@42fa6b32[userName=kathy64], User Guid : null , Device Version : A , OS : Android, Method : POST and Response is 400.
+2020-02-25 04:01:55.966  INFO 228 --- [nio-8080-exec-1] com.example.aop.DemoLoggingAspect        : Attempted /Portal login with request User Name : com.example.aop.DemoUserVO@42fa6b32[userName=kathy64], User Guid : null , Device Version : A , OS : Android, Method : POST and Response is 400.
 ```
