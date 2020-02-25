@@ -9,9 +9,3 @@ public class DemoVO {
 	private String guid;
 	private String userName;
 }
-
-// private static Pattern p = Pattern.compile("^[a-zA-Z]*$");
-//
-// public static boolean isAlpha(String s) {
-// return p.matcher(s).find();
-// }demoVO
