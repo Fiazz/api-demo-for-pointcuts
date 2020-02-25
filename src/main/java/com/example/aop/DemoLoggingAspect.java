@@ -25,6 +25,6 @@ public class DemoLoggingAspect {
 				ToStringBuilder.reflectionToString(jp.getArgs()[4]), demoVO.getGuid(), jp.getArgs()[2], jp.getArgs()[3],
 				((HttpServletRequest) jp.getArgs()[0]).getMethod(),
 				((HttpServletResponse) jp.getArgs()[1]).getStatus());
-
+		// The Logger includes sample of data from request headers, request body, response status, response body and also parsed a complete json to String using reflectionToString
 	}
 }
