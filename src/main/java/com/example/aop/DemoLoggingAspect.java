@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -22,7 +23,7 @@ public class DemoLoggingAspect {
 		// Args in the order passed in the controller
 		LOGGER.info(
 				"Attempted /Portal login with request User Name : {}, User Guid : {} , Device Version : {} , OS : {}, Method : {} and Response is {}.",
-				ToStringBuilder.reflectionToString(jp.getArgs()[4]), demoVO.getGuid(), jp.getArgs()[2], jp.getArgs()[3],
+				ToStringBuilder.reflectionToString(jp.getArgs()[4], ToStringStyle.NO_CLASS_NAME_STYLE), demoVO.getGuid(), jp.getArgs()[2], jp.getArgs()[3],
 				((HttpServletRequest) jp.getArgs()[0]).getMethod(),
 				((HttpServletResponse) jp.getArgs()[1]).getStatus());
 		// The Logger includes sample of data from request headers, request body, response status, response body and also parsed a complete json to String using reflectionToString
