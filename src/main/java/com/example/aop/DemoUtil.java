@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Component;
 
+import com.example.aop.exception.DemoException;
+
 import io.micrometer.core.instrument.util.StringUtils;
 
 @Component
@@ -15,10 +17,8 @@ public class DemoUtil {
 
 	public boolean validate(HttpServletRequest request, HttpServletResponse response, String deviceVersion) {
 		if (StringUtils.isNotBlank(deviceVersion) && !p.matcher(deviceVersion).find()) {
-			response.setStatus(400);
-			return false;
-		}
-		else{
+			throw new DemoException();
+		} else {
 			return true;
 		}
 	}

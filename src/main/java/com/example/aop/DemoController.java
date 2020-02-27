@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -21,8 +20,7 @@ public class DemoController {
 	@Autowired
 	private DemoEO eo;
 
-	@RequestMapping(value = "/portal", method = RequestMethod.POST, produces = "application/json")
-	@ResponseBody
+	@RequestMapping(value = "/invoke", method = RequestMethod.POST, produces = "application/json")
 	public DemoVO getResponse(HttpServletRequest request, HttpServletResponse response,
 			@RequestHeader("X-Device-Version") String deviceVersion, @RequestHeader("X-Device-OS") String deviceOS,
 			@RequestBody DemoUserVO user) {
