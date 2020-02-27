@@ -20,6 +20,6 @@ Logs: Check the last two Lines below
 ...
 2020-02-28 00:58:23.117  INFO 648 --- [nio-8080-exec-1] com.example.aop.DemoEO                   : Generated guid : 7c1a7fea-cfaf-4ac4-b912-b1d929729457 for User : kathy64
 2020-02-28 00:58:23.141  INFO 648 --- [nio-8080-exec-1] com.example.aop.DemoLoggingAspect        : Attempted /invoke url with request User Name : [userName=kathy64], User Guid : 7c1a7fea-cfaf-4ac4-b912-b1d929729457 , Device Version : 1 , OS : Android, Method : POST and Response is 200.
-2020-02-28 00:58:50.073  ERROR 648 --- [nio-8080-exec-2] com.example.aop.DemoLoggingAspect        : Attempted /invoke url with request User Name : [userName=kathy64], Device Version : A , OS : Android, Method : POST and Response is 400.
+2020-02-28 00:59:18.899 ERROR 648 --- [nio-8080-exec-2] com.example.aop.DemoLoggingAspect        : Attempted /invoke url with request User Name : [userName=kathy64], Device Version : A , OS : Android, Method : POST and Response is 400.
 
 ```
